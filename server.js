@@ -19,9 +19,9 @@ app.post('/slack/no', async (req, res) => {
     try {
         // Verify the request is from Slack (optional but recommended)
         const slackToken = req.body.token;
-        if (process.env.SLACK_VERIFICATION_TOKEN && slackToken !== process.env.SLACK_VERIFICATION_TOKEN) {
-            return res.status(401).json({ error: 'Invalid token' });
-        }
+        //if (process.env.SLACK_VERIFICATION_TOKEN && slackToken !== process.env.SLACK_VERIFICATION_TOKEN) {
+        //    return res.status(401).json({ error: 'Invalid token' });
+        //}
 
         // Call the naas API
         const response = await axios.get('https://naas.isalman.dev/no');
